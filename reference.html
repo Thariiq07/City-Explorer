@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            overflow-x:hidden
+        }
+
+        .container {
+            padding: 0 20px;
+            display:flex;
+            width:100%;
+        }
+
+        header {
+            background: linear-gradient(to right, #ce004a, #76179b);
+            color: #fff;
+            padding: 15px 0; /* Increased padding for the navigation bar */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-center
+        {
+            display: flex;
+            margin:auto 0 auto auto;
+        }
+        .search-container {
+            padding-bottom: 5px;
+            margin-left: auto;
+        }
+
+
+        .header-left {
+            text-wrap:nowrap; /* Pushes it to the left */
+        }
+
+        .header-center nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header-center nav ul li {
+            margin-right: 20px;
+        }
+
+        .header-center nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .search-box {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white background */
+            color: #333;
+            font-size: 16px;
+            transition: width 0.4s ease-in-out; /* Smooth transition for resizing */
+        }
+
+        .about-container {
+            padding: 200px 0;
+            background-size: cover;
+            background-position: center;
+            animation: slideshow 12s infinite; /* Adjust the duration and timing function as needed */
+        }
+
+        @keyframes slideshow {
+            0% { background-image: url(images/kris-atomic-3b2tADGAWnU-unsplash.jpg); }
+            25% { background-image: url(images/kyle-bushnell-1fP5LvIyWjg-unsplash.jpg); } /* Change image2.jpg to the URL of your second image */
+            50% { background-image: url(images/paul-alex-fXoUgvYHaF4-unsplash.jpg); } /* Change image3.jpg to the URL of your third image */
+            75% { background-image: url(images/pema-lama-6cfK0SEtpbY-unsplash.jpg); } /* Change image4.jpg to the URL of your fourth image */
+            100% { background-image: url(images/redd-f-1sUs8JbGx74-unsplash.jpg); } /* Back to the first image */
+        }   
+
+        .about-container .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            text-wrap: nowrap;
+            justify-content: center;
+            margin: auto;
+            font-size: xx-large;
+            color: #f5f5f5;
+            text-decoration: underline;
+        }
+
+
+        .city-explorer-container{
+            margin-right: 180%;
+            padding-right: 200%;
+        }
+
+        .search-container {
+            padding-bottom: 5px;
+        }
+
+        .search-container .search-box:focus {
+            width: 200px; /* Expanded width on focus */
+        }
+
+
+
+        .listing-section {
+            padding: 50px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .about-container .container1{
+            text-align: center;
+            justify-content: center;
+            font-weight: bolder;
+            font-family: 'montserrat' sans-serif;
+            font-size: x-large;
+            
+        }
+
+    
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <div class="city-explorer-container">
+                    <h1>City Explorer</h1>
+                </div>
+            </div>
+            <div class="header-center">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="search-container">
+                <div class="search-box-container">
+                    <input type="text" class="search-box" placeholder="Search...">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="about-container">
+        <div class="container">
+            <h2>About City Explorer</h2>
+        </div>
+            <div class="container1">
+                <p>Welcome to City Explorer, your ultimate guide to exploring the best cafes, theatres, and restaurants in your city! Whether you're a local or just visiting, we've got you covered with comprehensive listings and reviews. Start exploring now and discover new favorites!</p>
+            </div>
+    </div>
+    
+
+    <section id="cafes" class="listing-section">
+        <div class="container">
+            <h2>Cafes</h2>
+            <!-- Cafe listings will go here -->
+        </div>
+    </section>
+
+    <section id="theatres" class="listing-section">
+        <div class="container">
+            <h2>Theatres</h2>
+            <!-- Theatre listings will go here -->
+        </div>
+    </section>
+
+    <section id="restaurants" class="listing-section">
+        <div class="container">
+            <h2>Restaurants</h2>
+            <!-- Restaurant listings will go here -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 City Explorer</p>
+        </div>
+    </footer>
+</body>
+</html>
